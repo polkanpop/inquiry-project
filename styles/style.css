@@ -220,6 +220,45 @@ footer p {
   }
   
   /* About Page Styles */
+  dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+  }
+  
+  dt {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  dd {
+    margin-left: 0;
+  }
+  
+  dd a {
+    color: #a71111;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  figure {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  figure img {
+    max-width: 100%;
+    width: 25rem;
+    height: auto;
+    border: 3px solid rgb(41, 2, 53);
+    border-radius: 10px;
+  }
+  figcaption {
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+
+
 
   table {
     width: 100%;
@@ -235,8 +274,10 @@ footer p {
   }
   
   th {
+    font-weight: bold;
     background-color: var(--primary-color);
-    color: var(--background-color);
+    font-size: 1.1em;
+    color: #f2fbff;
   }
   
   tr:nth-child(even) {
@@ -335,46 +376,6 @@ footer p {
 #back-button:hover {
     background-color: var(--primary-color); 
 }
-
-  /* Photos Design */
-  .photos-container {
-    display: inline-block;
-}
-
-.overlay {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-    background-color: #ffc72d;
-}
-
-.photo {
-    text-align: center;
-    width: 15rem; 
-}
-
-.member-image {
-    width: 100%; 
-    height: auto; 
-
-    transition: transform 0.3s;
-}
-
-.photo:hover .member-image {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.photo p {
-  font-family: 'Courier New', Courier, monospace;
-  color: black;
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: larger;
-  font-weight: bold;
-}
-
 
 
   /* Responsive Design */
