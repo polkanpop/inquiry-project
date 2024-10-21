@@ -51,7 +51,7 @@ h1 {
 }
 /* Hero Section Styles */
 .hero {
-  background-image: url('../images/hero-background.png');
+  background-image: url('./images/hero-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
