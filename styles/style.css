@@ -21,7 +21,7 @@ This css file is to style all webpages
     color: var(--text-color);
     background-color: var(--background-color);
     margin: 0;
-    padding: 0 0 40px 0;
+    padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ This css file is to style all webpages
 
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -46,82 +46,131 @@ h1 {
 /* Hero Section Styles */
 .hero {
   background-image: url('../images/hero-background.png');
-  background-size: cover ;
-  background-color: #131b64;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 60vh;
-  min-height: 400px;
-  display: flex;
-  justify-content: left;
-  text-align: left;
   color: #ddefff;
   text-shadow: #000638 1px 4px 1px;
-  position: relative;
-  margin-bottom: 4vh;
   border-radius: 2rem;
   box-shadow: #00063886 2px 4px 6px;
+  overflow: hidden;
+  margin-bottom: 4vh;
+  animation: fadeIn 1s ease-in;
 }
-.hero hr {
-  border: solid #d8f6ff 1px;
-  margin-right: 3rem;
-}
-
-
 
 .hero-content {
-  position: relative;
-  z-index: 1;
+  background-color: rgba(19, 27, 100, 0.7);
+  padding: 2rem;
   max-width: 800px;
-  padding: 3rem;
-  padding-top: 0.5rem;
-  
+  margin: 0 auto;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #ffffff;
-  text-shadow: #260127 4px 2px 3px ;
-
-  
+  text-shadow: #260127 4px 2px 3px;
 }
+
 .hero h2 {
+  font-size: 1.8rem;
   color: #ade8ff;
+  margin-top: 1rem;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  margin-right: 3rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+.hero hr {
+  border: solid #d8f6ff 1px;
+  margin: 1rem 0;
 }
 
 
-/* Responsive adjustments for the hero section */
-@media (max-width: 768px) {
-  .hero {
-    height: 50vh;
+
+
+/* Enhancements */
+
+/* Interactive Job Listings */
+details {
+  margin-bottom: 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+details[open] summary {
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .hero-content {
+      padding: 3rem;
   }
 
   .hero h1 {
-    font-size: 2rem;
+      font-size: 3rem;
+  }
+
+  .hero h2 {
+      font-size: 2rem;
   }
 
   .hero p {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 528px) {
-  .hero {
-    height: 70vh;
-  }
-}
-@media (max-width: 384px) {
-  .hero {
-    height: 80vh
+      font-size: 1.25rem;
   }
 }
 
+@media (max-width: 480px) {
+  .hero-content {
+      padding: 1.5rem;
+  }
+
+  .hero h1 {
+      font-size: 2rem;
+  }
+
+  .hero h2 {
+      font-size: 1.5rem;
+  }
+
+  .hero p {
+      font-size: 0.9rem;
+  }
+}
+
+
+/* Ensure links are easily identifiable */
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  outline: 2px solid var(--primary-color);
+}
+
+/* Improve focus visibility */
+:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
 
 
 
